@@ -1,5 +1,6 @@
 package com.tintop.app.neo4j.connector;
 
+import com.tintop.app.neptune.connector.NeptuneConnector;
 import org.neo4j.driver.*;
 
 public class Neo4JConnector {
@@ -21,9 +22,12 @@ public class Neo4JConnector {
     }
 
     public static void main(String[] args) {
-        Neo4JConnector connector = new Neo4JConnector();
+        /*Neo4JConnector connector = new Neo4JConnector();
         Driver driver = connector.getConnection();
-        connector.selectRecords("",driver);
+        connector.selectRecords("",driver);*/
+
+        NeptuneConnector nepConnect = new NeptuneConnector();
+        nepConnect.connectToNeptune();
 
     }
 }
